@@ -1,10 +1,20 @@
-const classSchema = new Schema({
+const mongoose = require("mongoose");
+
+const classSchema = new mongoose.Schema({
 	name: { type: String, required: true },
-	teacher: { type: Schema.Types.ObjectId, ref: "Teacher", required: true },
-	section: { type: Schema.Types.ObjectId, ref: "Section", required: true },
+	teacher: {
+		type: mongoose.Schema.Types.ObjectId,
+		ref: "Teacher",
+		required: true,
+	},
+	section: {
+		type: mongoose.Schema.Types.ObjectId,
+		ref: "Section",
+		required: true,
+	},
 });
 
-const sectionSchema = new Schema({
+const sectionSchema = new mongoose.Schema({
 	name: { type: String, required: true },
 });
 
