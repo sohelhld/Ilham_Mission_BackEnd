@@ -28,4 +28,26 @@ const getStudent = async (req, res) => {
     }
 };
 
-module.exports = { addStudent, getStudent };
+const updateStudent = async (req, res) => {
+    const { id } = req.params;
+    const payload = req.body;
+    try {
+        const student = await StudentModel.findByIdAndUpdate(id, payload);
+        res.status(201).send({ message: " Student is updated", student });
+    } catch (error) {
+        res.status(401).send(error.message);
+    }
+};
+const deleteStudent = async (req, res) => {
+    const { id } = req.params;
+    const payload = req.body;
+
+    try {
+        const student = await StudentModel.findByIdAndDelete(id, payload);
+        res.status(201).send({ message: " Student is deleted", student });
+    } catch (error) {
+        res.status(401).send(error.message);
+    }
+};
+
+module.exports = { addStudent, getStudent, updateStudent, deleteStudent };
