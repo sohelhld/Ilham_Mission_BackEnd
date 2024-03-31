@@ -3,15 +3,13 @@
 const express = require("express");
 const teacherRoute = express.Router();
 const {
-	createTeacher,
-	getAllTeachers,
-	getTeacherById,
-	updateTeacher,
-	deleteTeacher,
+    createTeacher,
+    getAllTeachers,
+    getTeacherById,
+    updateTeacher,
+    deleteTeacher,
 } = require("../controllers");
 const { getTeacher } = require("../middlewares");
-
-
 
 teacherRoute.post("/createTeacher", createTeacher);
 
