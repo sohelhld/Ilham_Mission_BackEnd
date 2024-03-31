@@ -1,9 +1,15 @@
-const gradeSchema = new Schema({
-	student: { type: Schema.Types.ObjectId, ref: "Student", required: true },
+const mongoose = require("mongoose");
+
+const gradeSchema = new mongoose.Schema({
+	student: {
+		type: mongoose.Schema.Types.ObjectId,
+		ref: "Student",
+		required: true,
+	},
 	allSubjects: [
 		{
 			subject: {
-				type: Schema.Types.ObjectId,
+				type: mongoose.Schema.Types.ObjectId,
 				ref: "Subject",
 				required: true,
 			},

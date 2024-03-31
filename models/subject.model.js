@@ -1,4 +1,6 @@
-const subjectSchema = new Schema({
+const mongoose = require("mongoose");
+
+const subjectSchema = new mongoose.Schema({
 	name: { type: String, required: true },
 	subjectCode: { type: String, required: true, unique: true },
 });
