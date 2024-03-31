@@ -13,14 +13,14 @@ const { getTeacher } = require("../middlewares");
 
 
 
-teacherRoute.post("/", createTeacher);
+teacherRoute.post("/createTeacher", createTeacher);
 
-teacherRoute.get("/", getAllTeachers);
+teacherRoute.get("/getAllTeachers", getAllTeachers);
 
-teacherRoute.get("/:id", getTeacher, getTeacherById);
+teacherRoute.get("/getTeacherById/:id", getTeacher, getTeacherById);
 
-teacherRoute.patch("/:id", getTeacher, updateTeacher);
+teacherRoute.patch("/updateTeacher/:id", getTeacher, updateTeacher);
 
-teacherRoute.delete("/:id", getTeacher, deleteTeacher);
+teacherRoute.delete("/deleteTeacher/:id", getTeacher, deleteTeacher);
 
 module.exports = teacherRoute;
