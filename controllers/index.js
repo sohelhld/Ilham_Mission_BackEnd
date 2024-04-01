@@ -11,6 +11,12 @@ const {
     updateSubject,
     deleteSubject,
 } = require("./subject.controller");
+const {
+    createGrade,
+    getGrades,
+    updateGrade,
+    deleteGrade,
+} = require("./grade.controller");
 module.exports = {
     createTeacher,
     getAllTeachers,
@@ -21,4 +27,8 @@ module.exports = {
     getSubjects,
     updateSubject,
     deleteSubject,
+    createGrade,
+    getGrades,
+    updateGrade,
+    deleteGrade,
 };
