@@ -1,25 +1,12 @@
-const {
-    createTeacher,
-    getAllTeachers,
-    getTeacherById,
-    updateTeacher,
-    deleteTeacher,
-} = require("./teachers.controller");
-const {
-    createSubject,
-    getSubjects,
-    updateSubject,
-    deleteSubject,
-} = require("./subject.controller");
-
+const {	createTeacher,
+	getAllTeachers,
+	getTeacherById,
+	updateTeacher,
+	deleteTeacher} = require("./teachers.controller")
 module.exports = {
-    createTeacher,
-    getAllTeachers,
-    getTeacherById,
-    updateTeacher,
-    deleteTeacher,
-    createSubject,
-    getSubjects,
-    updateSubject,
-    deleteSubject,
+	createTeacher,
+	getAllTeachers,
+	getTeacherById,
+	updateTeacher,
+	deleteTeacher,
 };
